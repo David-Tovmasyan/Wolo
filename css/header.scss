@@ -1,31 +1,103 @@
 header {
-    display: flex;
-    justify-content: center;
-    height: 16rem;
-    border-bottom: 2px solid gray;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    box-shadow: 0 1px 4px 0 rgba($color: black, $alpha: 0.25);
+    width: 100vw;
 
     .menu_button {
         display: block;
         position: relative;
-
+        grid-column: 3;
+        justify-self: center;
+       
         button {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 1rem;
-            padding: 2rem 3rem;
+            gap: 4px;
+            background-color: #fff;
+            padding: 10px 20px;
+            border: 1px solid rgba($color: black, $alpha: 0.25);
+            border-radius: 150px;
+            
+            cursor: pointer;
 
             .line {
                 background-color: black;
-                width: 4rem;
-                height: 1.5px;
+                width: 15px;
+                height: 2px;
                 transition: 150ms;
                 transform: rotate(0);
-
-            }          
-
-            .crossed {
+                border-radius: 10px;
             }
+
         }
     }
+
+
+
 }
+
+.second_row {
+    min-height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    justify-self: center;
+    .empty{
+        width: 200px;
+    }
+    .search_dropdown {
+        grid-column: 2;
+        max-width: 2fr;
+        justify-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: black;
+        width: 310px;
+
+        position: relative;
+        bottom: 30px;
+
+        .search_item {
+            padding: 5px;
+            width: 90%;
+            border-bottom: 1px solid rgba($color: white, $alpha: 0.25);
+            text-decoration: none;
+            color: white;
+            transition: all 0.1s;
+            &:hover{
+               color: rgba($color: gray, $alpha: 1);
+            }
+
+            &:last-child{
+                border: 0;
+            }
+        }
+
+
+    }
+
+
+    .menu {
+        grid-column: 3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-height: 2fr;
+        .menu_container {
+
+
+            .menu_item {}
+        }
+
+
+    }
+
+}
+
